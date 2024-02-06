@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "0af41250-677f-4ac0-bc4e-43278e4b8108",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22968582"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"login_id\" : \"admin123\",\n    \"password\" : \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/login",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"login_id\" : \"admin123\",\n    \"password\" : \"password\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/admin/login",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "864"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"360-ILc5WJEUcaVbht0ebjkkGzMHrSA\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 05 Feb 2024 07:31:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"Login Successfully\",\n    \"data\": {\n        \"login_id\": \"admin123\",\n        \"name\": \"Admin User\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbl9pZCI6ImFkbWluMTIzIiwibmFtZSI6IkFkbWluIFVzZXIiLCJwYXNzd29yZCI6IiQyYSQxMCQ2elJkbnU5WmN2ejkxQ2lWYTVMeUV1czkxdzhLSzV3OUhrOTRoL05YeUcyMks3RFFXSlFoSyIsInRva2VuIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnNiMmRwYmw5cFpDSTZJbUZrYldsdU1USXpJaXdpYm1GdFpTSTZJa0ZrYldsdUlGVnpaWElpTENKd1lYTnpkMjl5WkNJNklpUXlZU1F4TUNRMmVsSmtiblU1V21OMmVqa3hRMmxXWVRWTWVVVjFjemt4ZHpoTFN6VjNPVWhyT1RSb0wwNVllVWN5TWtzM1JGRlhTbEZvU3lJc0luUnZhMlZ1SWpvaUlpd2lZM0psWVhSbFpGOWhkQ0k2TWpBeU5EQXlNRFV4TXpFNU5USXNJbWxoZENJNk1UY3dOekV4TlRnNU1uMC5SYW14ZmlPNno4cXlnN25RQUV5MHM1SXQ1WnpRVW1OWW5PdGduNGR1M0RZIiwiY3JlYXRlZF9hdCI6MjAyNDAyMDUxMzE5NTIsImlhdCI6MTcwNzExODMwN30.CHLgEiOqaBKLNLmKnLCYlwuRN2dc2KuS0eaw134DEDY\",\n        \"created_at\": 20240205131952\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/logout",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"aungpaingsoe\",\n    \"login_id\" : \"aps123\",\n    \"password\" : \"password\",\n    \"password_confirmation\" : \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/register",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Management",
+					"item": [
+						{
+							"name": "All Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/users",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/users/568599ce-c439-11ee-9cc2-aea52b457017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"568599ce-c439-11ee-9cc2-aea52b457017"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/users/ed42ae2a-c42e-11ee-9cc2-aea52b457017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"ed42ae2a-c42e-11ee-9cc2-aea52b457017"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_name\": \"Paing Soe\",\n    \"email\": \"aps@gmail.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\",\n    \"bio\": \"bio\",\n    \"user_type\": \"normal\",\n    \"status\": \"no_verify\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/users",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\" : \"no_verify\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/users/568599ce-c439-11ee-9cc2-aea52b457017/status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"568599ce-c439-11ee-9cc2-aea52b457017",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category Management",
+					"item": [
+						{
+							"name": "All Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/categories",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"new_category\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/categories",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/categories/601b3282-c443-11ee-9cc2-aea52b457017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"601b3282-c443-11ee-9cc2-aea52b457017"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"update_category\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/admin/categories/601b3282-c443-11ee-9cc2-aea52b457017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"601b3282-c443-11ee-9cc2-aea52b457017"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/admin/categories/601b3282-c443-11ee-9cc2-aea52b457017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										"601b3282-c443-11ee-9cc2-aea52b457017"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post Mangement",
+					"item": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{admin_access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
